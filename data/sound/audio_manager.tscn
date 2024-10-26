@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://cy48ck4jahvo"]
+
+[ext_resource type="Script" path="res://data/script/audio_manager.gd" id="1_vh6g0"]
+[ext_resource type="AudioStream" uid="uid://b4iimcocnngif" path="res://data/sound/sfx/jump.wav" id="2_jipdk"]
+[ext_resource type="AudioStream" uid="uid://dvhi6nnv3rv7b" path="res://data/sound/sfx/ability.wav" id="3_lqwm3"]
+[ext_resource type="AudioStream" uid="uid://dixbhv7hkeh0g" path="res://data/sound/sfx/coin.wav" id="4_nx25w"]
+[ext_resource type="AudioStream" uid="uid://b2yhp87w46v1c" path="res://data/sound/sfx/navigate.wav" id="5_kpwl8"]
+[ext_resource type="AudioStream" uid="uid://b64pi0gmrai2d" path="res://data/sound/sfx/select.wav" id="6_0ff6g"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_vh6g0")
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+bus = &"Music bus"
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jipdk")
+bus = &"SFX bus"
+
+[node name="AbilitySound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_lqwm3")
+bus = &"SFX bus"
+
+[node name="CoinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_nx25w")
+bus = &"SFX bus"
+
+[node name="NavigateSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_kpwl8")
+bus = &"SFX bus"
+
+[node name="SelectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_0ff6g")
+bus = &"SFX bus"
+
+[connection signal="finished" from="MusicPlayer" to="." method="_on_music_player_finished"]

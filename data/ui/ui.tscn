@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj3rf887nnpgb"]
+
+[ext_resource type="Texture2D" uid="uid://j6igio4pbdkx" path="res://data/ui/sprite/icon_coin.png" id="1_a3rw8"]
+[ext_resource type="FontFile" uid="uid://xluqv27b3tww" path="res://data/ui/font/PixelOperator8-Bold.ttf" id="2_4wahi"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1051.82, 28)
+scale = Vector2(4.365, 4.365)
+texture = ExtResource("1_a3rw8")
+
+[node name="CollectionCounter" type="Label" parent="."]
+offset_left = 1076.82
+offset_top = 17.0
+offset_right = 1221.82
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(1, 0.94902, 0.105882, 1)
+theme_override_fonts/font = ExtResource("2_4wahi")
+theme_override_font_sizes/font_size = 20
+text = "x0"

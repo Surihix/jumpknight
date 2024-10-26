@@ -1,0 +1,11 @@
+keys,en,ja
+$menu_1,New Game,NEW GAME
+$menu_2,Options,オプション
+$menu_2_1,SFX Volume:,SFX ボリューム:
+$menu_2_2,Music Volume:,音楽 ボリューム:
+$menu_2_3,Language:,言語:
+$menu_3,Credits,クレジット
+$menu_3_1,Music :  Eric Matyas - (www.soundimage.org),音楽 : エリック・マティアス - (www.soundimage.org)
+$menu_3_2,Art and SFX : Brackeys and Surihix,アートとSFX: ブラッキーズ と スリヒックス
+$menu_3_3,Game Programming : Surihix,ゲームプログラミング: スリヒックス
+$menu_back,Back,戻る
