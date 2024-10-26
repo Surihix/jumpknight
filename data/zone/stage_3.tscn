@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dj3rf887nnpgb" path="res://data/ui/ui.tscn" id="2_hasdp"]
 [ext_resource type="Texture2D" uid="uid://bj13c6bu3polu" path="res://data/zone/sprite/world_tileset.png" id="3_imcbe"]
 [ext_resource type="PackedScene" uid="uid://dm7m0n5ugxslt" path="res://data/chr/knight_data/knight.tscn" id="4_yeqa2"]
+[ext_resource type="PackedScene" uid="uid://h6s640so3h1v" path="res://data/object/collectible/ability.tscn" id="5_3tqki"]
 [ext_resource type="PackedScene" uid="uid://dor7wtx18sd1r" path="res://data/zone/platform_a.tscn" id="5_uom6e"]
-[ext_resource type="PackedScene" uid="uid://bje2nifp0bt0o" path="res://data/objects/ability.tscn" id="5_x7bbg"]
-[ext_resource type="PackedScene" uid="uid://jxk50vah2vtx" path="res://data/objects/coin.tscn" id="6_n6dw4"]
+[ext_resource type="PackedScene" uid="uid://d223v6y48k83c" path="res://data/object/collectible/coin.tscn" id="6_cq5e4"]
 [ext_resource type="PackedScene" uid="uid://cj1nhhwg04gyn" path="res://data/object/misc/killzone.tscn" id="8_2o3jy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knu2j"]
@@ -291,24 +291,24 @@ limit_smoothed = true
 
 [node name="collectibles" type="Node" parent="."]
 
-[node name="ability" parent="collectibles" instance=ExtResource("5_x7bbg")]
+[node name="ability" parent="collectibles" instance=ExtResource("5_3tqki")]
 position = Vector2(-26, -9)
 
 [node name="coins" type="Node" parent="collectibles"]
 
-[node name="coin1" parent="collectibles/coins" instance=ExtResource("6_n6dw4")]
+[node name="coin1" parent="collectibles/coins" instance=ExtResource("6_cq5e4")]
 position = Vector2(169, 25)
 
-[node name="coin2" parent="collectibles/coins" instance=ExtResource("6_n6dw4")]
+[node name="coin2" parent="collectibles/coins" instance=ExtResource("6_cq5e4")]
 position = Vector2(209, -173)
 
-[node name="coin3" parent="collectibles/coins" instance=ExtResource("6_n6dw4")]
+[node name="coin3" parent="collectibles/coins" instance=ExtResource("6_cq5e4")]
 position = Vector2(-50, -221)
 
-[node name="coin4" parent="collectibles/coins" instance=ExtResource("6_n6dw4")]
+[node name="coin4" parent="collectibles/coins" instance=ExtResource("6_cq5e4")]
 position = Vector2(-80, -221)
 
-[node name="coin5" parent="collectibles/coins" instance=ExtResource("6_n6dw4")]
+[node name="coin5" parent="collectibles/coins" instance=ExtResource("6_cq5e4")]
 position = Vector2(592, -299)
 
 [node name="platforms" type="Node" parent="."]

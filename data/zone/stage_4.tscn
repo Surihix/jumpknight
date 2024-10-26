@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://dj3rf887nnpgb" path="res://data/ui/ui.tscn" id="2_fdxa1"]
 [ext_resource type="Texture2D" uid="uid://bj13c6bu3polu" path="res://data/zone/sprite/world_tileset.png" id="3_74wuo"]
 [ext_resource type="PackedScene" uid="uid://dm7m0n5ugxslt" path="res://data/chr/knight_data/knight.tscn" id="4_sbl3m"]
-[ext_resource type="PackedScene" uid="uid://bje2nifp0bt0o" path="res://data/objects/ability.tscn" id="5_qsnf1"]
 [ext_resource type="PackedScene" uid="uid://bi8yb3v3pvidt" path="res://data/chr/slime-green_data/slime_green.tscn" id="5_sbyag"]
-[ext_resource type="PackedScene" uid="uid://jxk50vah2vtx" path="res://data/objects/coin.tscn" id="6_k85o6"]
+[ext_resource type="PackedScene" uid="uid://h6s640so3h1v" path="res://data/object/collectible/ability.tscn" id="6_fwuyh"]
 [ext_resource type="PackedScene" uid="uid://cd1x1r7rgf46k" path="res://data/zone/platform_b.tscn" id="6_nlo7t"]
+[ext_resource type="PackedScene" uid="uid://d223v6y48k83c" path="res://data/object/collectible/coin.tscn" id="7_q8t0o"]
 [ext_resource type="Animation" uid="uid://poqutrekc1g0" path="res://data/anim/zone/stage_4/platform_b1_moveInYaxis.res" id="8_8sdj2"]
 [ext_resource type="Animation" uid="uid://cl7iu8wv5vp76" path="res://data/anim/zone/stage_4/platform_b1_RESET.res" id="9_gyqwo"]
 [ext_resource type="Animation" uid="uid://oh1kci1pu4mq" path="res://data/anim/zone/stage_4/platform_b2_moveInYaxis.res" id="10_mxp3s"]
@@ -332,33 +332,33 @@ position = Vector2(313, 36)
 
 [node name="collectibles" type="Node" parent="."]
 
-[node name="ability" parent="collectibles" instance=ExtResource("5_qsnf1")]
+[node name="ability" parent="collectibles" instance=ExtResource("6_fwuyh")]
 position = Vector2(-104, 26)
 
 [node name="coins" type="Node" parent="collectibles"]
 
-[node name="coin1" parent="collectibles/coins" instance=ExtResource("6_k85o6")]
+[node name="coin1" parent="collectibles/coins" instance=ExtResource("7_q8t0o")]
 position = Vector2(-7, 73)
 
-[node name="coin2" parent="collectibles/coins" instance=ExtResource("6_k85o6")]
+[node name="coin2" parent="collectibles/coins" instance=ExtResource("7_q8t0o")]
 position = Vector2(-104, -83)
 
-[node name="coin3" parent="collectibles/coins" instance=ExtResource("6_k85o6")]
+[node name="coin3" parent="collectibles/coins" instance=ExtResource("7_q8t0o")]
 position = Vector2(216, 50)
 
-[node name="coin4" parent="collectibles/coins" instance=ExtResource("6_k85o6")]
+[node name="coin4" parent="collectibles/coins" instance=ExtResource("7_q8t0o")]
 position = Vector2(312, 3)
 
-[node name="coin5" parent="collectibles/coins" instance=ExtResource("6_k85o6")]
+[node name="coin5" parent="collectibles/coins" instance=ExtResource("7_q8t0o")]
 position = Vector2(777, -144)
 
-[node name="coin6" parent="collectibles/coins" instance=ExtResource("6_k85o6")]
+[node name="coin6" parent="collectibles/coins" instance=ExtResource("7_q8t0o")]
 position = Vector2(1130, -152)
 
-[node name="coin7" parent="collectibles/coins" instance=ExtResource("6_k85o6")]
+[node name="coin7" parent="collectibles/coins" instance=ExtResource("7_q8t0o")]
 position = Vector2(1146, -240)
 
-[node name="coin8" parent="collectibles/coins" instance=ExtResource("6_k85o6")]
+[node name="coin8" parent="collectibles/coins" instance=ExtResource("7_q8t0o")]
 position = Vector2(1018, -240)
 
 [node name="platforms" type="Node" parent="."]
