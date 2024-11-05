@@ -10,27 +10,25 @@
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_vh6g0")
 
-[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 bus = &"Music bus"
 
-[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_jipdk")
 bus = &"SFX bus"
 
-[node name="AbilitySound" type="AudioStreamPlayer2D" parent="."]
+[node name="AbilitySound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_lqwm3")
 bus = &"SFX bus"
 
-[node name="CoinSound" type="AudioStreamPlayer2D" parent="."]
+[node name="CoinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_nx25w")
 bus = &"SFX bus"
 
-[node name="NavigateSound" type="AudioStreamPlayer2D" parent="."]
+[node name="NavigateSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_kpwl8")
 bus = &"SFX bus"
 
-[node name="SelectSound" type="AudioStreamPlayer2D" parent="."]
+[node name="SelectSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_0ff6g")
 bus = &"SFX bus"
-
-[connection signal="finished" from="MusicPlayer" to="." method="_on_music_player_finished"]

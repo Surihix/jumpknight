@@ -1,5 +1,6 @@
 extends Node
 
+@onready var music_player = $MusicPlayer
 @onready var navigate_sound = $NavigateSound
 @onready var select_sound = $SelectSound
 @onready var jump_sound = $JumpSound
@@ -22,13 +23,13 @@ func setStageTrack():
 		5:
 			currentStageTrack = load("res://data/sound/music/bgm_mystical_ocean_puzzle_game.wav")
 	
-	$MusicPlayer.stream = currentStageTrack
-	$MusicPlayer.play()
+	music_player.stream = currentStageTrack
+	music_player.play()
 	isTrackSet = true
 
 func _on_music_player_finished():
-	$MusicPlayer.stream = currentStageTrack
-	$MusicPlayer.play()
+	music_player.stream = currentStageTrack
+	music_player.play()
 
 func playNavigateSound():
 	navigate_sound.play()
