@@ -1,5 +1,8 @@
 extends Node
 
+const PIXEL_OPERATOR_8_BOLD = preload("res://data/ui/font/PixelOperator8-Bold.ttf")
+const PIXEL_OPERATOR_8 = preload("res://data/ui/font/PixelOperator8.ttf")
+
 @onready var base_menu_anim = $BaseMenu/AnimationPlayer
 @onready var options_menu_anim = $OptionsMenu/AnimationPlayer
 @onready var credits_menu_anim = $CreditsMenu/AnimationPlayer
@@ -14,7 +17,7 @@ extends Node
 @onready var sfx_slider = $OptionsMenu/SFXSlider
 @onready var music_option_label = $OptionsMenu/MusicOptionLabel
 @onready var music_slider = $OptionsMenu/MusicSlider
-@onready var lang_option = $OptionsMenu/LangOptionLabel
+@onready var lang_option_label = $OptionsMenu/LangOptionLabel
 @onready var lang_option_button = $OptionsMenu/LangOptionButton
 
 @onready var music_credit_label = $CreditsMenu/MusicCreditLabel
@@ -33,7 +36,7 @@ func _setTranslation():
 	options_button.text = tr("$menu_2")
 	sfx_option_label.text = tr("$menu_2_1")
 	music_option_label.text = tr("$menu_2_2")
-	lang_option.text = tr("$menu_2_3")
+	lang_option_label.text = tr("$menu_2_3")
 	credits_button.text = tr("$menu_3")
 	music_credit_label.text = tr("$menu_3_1")
 	art_sfx_credit_label.text = tr("$menu_3_2")
@@ -112,11 +115,36 @@ func _on_lang_option_button_item_selected(index):
 	match index:
 		0:
 			TranslationServer.set_locale("en")
+			changeLabelFont("en")
+			
 		1:
 			TranslationServer.set_locale("ja")
+			changeLabelFont("ja")
 	
 	_setTranslation()
 
+func changeLabelFont(locale):
+	match locale:
+		"en":
+			sfx_option_label.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
+			music_option_label.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
+			lang_option_label.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
+			new_game_button.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
+			options_button.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
+			credits_button.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
+			music_credit_label.add_theme_font_override("font", PIXEL_OPERATOR_8)
+			art_sfx_credit_label.add_theme_font_override("font", PIXEL_OPERATOR_8)
+			prog_credit_label.add_theme_font_override("font", PIXEL_OPERATOR_8)
+		"ja":
+			sfx_option_label.remove_theme_font_override("font")
+			music_option_label.remove_theme_font_override("font")
+			lang_option_label.remove_theme_font_override("font")
+			new_game_button.remove_theme_font_override("font")
+			options_button.remove_theme_font_override("font")
+			credits_button.remove_theme_font_override("font")
+			music_credit_label.remove_theme_font_override("font")
+			art_sfx_credit_label.remove_theme_font_override("font")
+			prog_credit_label.remove_theme_font_override("font")
 
 # Base Menu anim functions
 func _enableBaseMenu():
@@ -143,10 +171,10 @@ func _enableOptionsMenu():
 func _disableOptionsMenu():
 	sfx_slider.editable = false
 	sfx_slider.scrollable = false
-
+	
 	music_slider.editable = false
 	music_slider.scrollable = false
-
+	
 	lang_option_button.disabled = true
 
 

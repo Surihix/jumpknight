@@ -18,3 +18,7 @@ func _on_exit_body_entered(_body):
 	print("exited_stage_2")
 	GameManager.canMove = false
 	get_tree().call_deferred("change_scene_to_file", "res://data/zone/stage_3.tscn")
+
+
+func adjustStageLabel():
+	pass
