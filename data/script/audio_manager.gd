@@ -27,6 +27,9 @@ func setStageTrack():
 	music_player.play()
 	isTrackSet = true
 
+func stopStageTrack():
+	music_player.stop()
+
 func _on_music_player_finished():
 	music_player.stream = currentStageTrack
 	music_player.play()

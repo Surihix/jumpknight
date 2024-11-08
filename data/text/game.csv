@@ -1,11 +1,11 @@
-keys,en,ja
-$tutorial_1,Use the left and right arrow keys to move,DUMMY
-$tutorial_2_1,Coin - pickup,DUMMY
-$tutorial_2_2,Ability - pickup,DUMMY
-$tutorial_2_3,Collect to 'evolve' your 'ability',DUMMY
-$tutorial_2_4,Near an exit platform,DUMMY
-$abi_jump,You have gained the ability to JUMP[p]Press SPACE key to JUMP[/p],DUMMY
-$abi_jump_double,JUMP ability 'evolved' to double jump[p]Press SPACE key two times in the Air[/p],DUMMY
-$abi_float,Double Jump 'evolved' to FLOAT[p]Hold SPACE key to float in the Air[/p],DUMMY
-$endMsg,You have fully evolved the knight!,DUMMY
-$coinCollected,Coins Collected:,DUMMY
+keys,en,ja,hi
+$tutorial_1,Use the left and right arrow keys to move,「左」と「右」の矢印キーを使って移動します,DUMMY
+$tutorial_2_1,Coin - pickup,コイン,DUMMY
+$tutorial_2_2,Ability - pickup,能力,DUMMY
+$tutorial_2_3,Collect to 'evolve' your 'ability',このピックアップを集めると「能力」が「進化」します,DUMMY
+$tutorial_2_4,Near an exit platform,出口プラットフォーム,DUMMY
+$abi_jump,You have gained the ability to JUMP[p]Press SPACE key to JUMP[/p],ジャンプする能力を獲得しました[p]ジャンプするには「スペース」キーを押してください[/p],DUMMY
+$abi_jump_double,JUMP ability 'evolved' to double jump[p]Press SPACE key two times in the Air[/p],「ジャンプ」能力はダブルジャンプに進化しました[p]空中にいるときに「スペース」キーを2回押してください[/p],DUMMY
+$abi_float,Double Jump 'evolved' to FLOAT[p]Hold SPACE key to float in the Air[/p],「ダブルジャンプ」能力がフロートに進化しました[p]「スペース」キーを押したままにすると空中に浮かびます[/p],DUMMY
+$endMsg,You have fully evolved the knight!,騎士を完全に進化させました！,DUMMY
+$coinCollected,Coins Collected:,集めた「コイン」：,DUMMY

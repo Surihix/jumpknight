@@ -28,6 +28,10 @@ AudioManager="*res://data/sound/audio_manager.tscn"
 
 window/stretch/mode="viewport"
 
+[dotnet]
+
+project/assembly_name="jumpKnight"
+
 [input]
 
 move_left={

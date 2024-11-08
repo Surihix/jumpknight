@@ -1,6 +1,9 @@
 extends Node
 
+@onready var evolved_txt_label = $EvolvedTxtLabel
+@onready var total_coins_collected_label = $TotalCoinsCollectedLabel
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	AudioManager.stopStageTrack()
+	evolved_txt_label.text = tr("$endMsg")
+	total_coins_collected_label.text = tr("$coinCollected") + " " + str(GameManager.coinsCollected)
