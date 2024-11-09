@@ -156,7 +156,7 @@ color = Color(0, 0, 0, 1)
 [node name="InstructionsLabel" type="Label" parent="."]
 offset_left = -48.0
 offset_top = -28.0
-offset_right = 65.0
+offset_right = 83.0
 offset_bottom = 2.0
 theme_override_fonts/font = ExtResource("2_gxb8p")
 theme_override_font_sizes/font_size = 8

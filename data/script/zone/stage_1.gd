@@ -2,6 +2,7 @@ extends Node
 
 @onready var instructions_label = $InstructionsLabel
 const PIXEL_OPERATOR_8 = preload("res://data/ui/font/PixelOperator8.ttf")
+const LANA_PIXEL = preload("res://data/ui/font/LanaPixel.ttf")
 
 func _ready():
 	instructions_label.text = tr("$tutorial_1")
@@ -22,5 +23,7 @@ func adjustStageLabel():
 	match TranslationServer.get_locale():
 		"en":
 			instructions_label.add_theme_font_override("font", PIXEL_OPERATOR_8)
+			instructions_label.add_theme_font_size_override("font_size", 8)
 		"ja":
-			instructions_label.remove_theme_font_override("font")
+			instructions_label.add_theme_font_override("font", LANA_PIXEL)
+			instructions_label.add_theme_font_size_override("font_size", 11)

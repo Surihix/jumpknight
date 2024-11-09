@@ -23,6 +23,7 @@ buses/default_bus_layout="res://data/sound/bus_layout.tres"
 
 GameManager="*res://data/script/game_manager.gd"
 AudioManager="*res://data/sound/audio_manager.tscn"
+ZoneTransition="*res://data/ui/zone_transition.tscn"
 
 [display]
 

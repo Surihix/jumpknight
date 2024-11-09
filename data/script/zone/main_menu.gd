@@ -49,7 +49,7 @@ func _on_new_game_button_mouse_entered():
 
 func _on_new_game_button_pressed():
 	AudioManager.playSelectSound()
-	get_tree().change_scene_to_file("res://data/zone/stage_1.tscn")
+	ZoneTransition.changeSceneByTransition("res://data/zone/stage_1.tscn")
 
 func _on_options_button_mouse_entered():
 	if !options_button.disabled:
