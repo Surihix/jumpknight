@@ -20,9 +20,9 @@ func adjustStageLabel():
 			total_coins_collected_label.position.x = 247
 			total_coins_collected_label.position.y= 375
 		"ja":
-			evolved_txt_label.remove_theme_font_override("font")
+			evolved_txt_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
 			evolved_txt_label.position.x = 350
 			evolved_txt_label.position.y = 255
-			total_coins_collected_label.remove_theme_font_override("font")
-			total_coins_collected_label.position.x = 350
+			total_coins_collected_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+			total_coins_collected_label.position.x = 370
 			total_coins_collected_label.position.y = 375

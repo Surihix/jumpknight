@@ -57,6 +57,7 @@ jump={
 [internationalization]
 
 locale/translations=PackedStringArray("res://data/text/game.en.translation", "res://data/text/game.ja.translation", "res://data/text/menu.en.translation", "res://data/text/menu.ja.translation")
+locale/include_text_server_data=true
 
 [rendering]
 

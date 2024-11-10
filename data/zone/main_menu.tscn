@@ -239,7 +239,7 @@ expand_icon = true
 selected = 0
 item_count = 2
 popup/item_0/text = "English"
-popup/item_1/text = "日本語"
+popup/item_1/text = "Japanese"
 popup/item_1/id = 1
 
 [node name="CreditsMenu" type="Control" parent="."]

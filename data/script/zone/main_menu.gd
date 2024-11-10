@@ -25,6 +25,7 @@ var isOptionsMenu = false
 var isCreditsMenu = false
 
 func _ready():
+	lang_option_button.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
 	_setTranslation()
 	_enableBaseMenu()
 
@@ -133,16 +134,18 @@ func _changeLabelFont():
 			music_credit_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8)
 			art_sfx_credit_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8)
 			prog_credit_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8)
+			back_button.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
 		"ja":
-			sfx_option_label.remove_theme_font_override("font")
-			music_option_label.remove_theme_font_override("font")
-			lang_option_label.remove_theme_font_override("font")
-			new_game_button.remove_theme_font_override("font")
-			options_button.remove_theme_font_override("font")
-			credits_button.remove_theme_font_override("font")
-			music_credit_label.remove_theme_font_override("font")
-			art_sfx_credit_label.remove_theme_font_override("font")
-			prog_credit_label.remove_theme_font_override("font")
+			sfx_option_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+			music_option_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+			lang_option_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+			new_game_button.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+			options_button.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+			credits_button.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+			music_credit_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+			art_sfx_credit_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+			prog_credit_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+			back_button.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
 
 
 # Base Menu anim functions
