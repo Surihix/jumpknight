@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://qy43pbxkt82f"]
+[gd_scene load_steps=6 format=3 uid="uid://qy43pbxkt82f"]
 
 [ext_resource type="Script" path="res://data/script/ui/popup_text.gd" id="1_lr406"]
 [ext_resource type="FontFile" uid="uid://b7gbn816jlora" path="res://data/ui/font/PixelOperator8.ttf" id="2_gnqx8"]
@@ -33,26 +33,10 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_1xvck"]
-resource_name = "txt_fadeOut"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_extsa"]
 _data = {
-"Text_RESET": SubResource("Animation_1kuk1"),
-"Text_fadeIn": SubResource("Animation_0fb26"),
-"Text_fadeOut": SubResource("Animation_1xvck")
+"PopUpTxt_RESET": SubResource("Animation_1kuk1"),
+"PopUpTxt_fade": SubResource("Animation_0fb26")
 }
 
 [node name="PopupText" type="Node"]

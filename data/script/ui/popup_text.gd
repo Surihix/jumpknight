@@ -18,10 +18,12 @@ func displayPopUpTxt(posX, posY, text, time):
 			label.add_theme_font_override("normal_font", FontConstants.LANA_PIXEL)
 			label.add_theme_font_size_override("normal_font_size", 11)
 	
-	animation_player.play("Text_fadeIn")
+	animation_player.play("PopUpTxt_fade")
+	await animation_player.animation_finished
 	timer.start()
 
 
 func _on_timer_timeout():
-	animation_player.play("Text_fadeOut")
+	animation_player.play_backwards("PopUpTxt_fade")
+	await animation_player.animation_finished
 	timer.stop()
