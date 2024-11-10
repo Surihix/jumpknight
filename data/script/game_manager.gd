@@ -2,6 +2,7 @@ extends Node
 
 var currentStage = 0
 var currentStageUiTxtNode = null
+var currentStagePopUpTxtNode = null
 
 var coinsCollected = 0
 var coinsCollectedInPrevStages = 0

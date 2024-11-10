@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dyvgsrkj5jio2"]
 
-[ext_resource type="Script" path="res://data/script/zone_transition.gd" id="1_x70qk"]
+[ext_resource type="Script" path="res://data/script/ui/zone_transition.gd" id="1_bxb0s"]
 
 [sub_resource type="Animation" id="Animation_aqclh"]
 resource_name = "zone_fade"
@@ -40,7 +40,7 @@ _data = {
 }
 
 [node name="zone_transition" type="CanvasLayer"]
-script = ExtResource("1_x70qk")
+script = ExtResource("1_bxb0s")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)

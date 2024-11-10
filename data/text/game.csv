@@ -4,8 +4,8 @@ $tutorial_2_1,Coin - pickup,コイン
 $tutorial_2_2,Ability - pickup,能力
 $tutorial_2_3,Collect to 'evolve' your 'ability',このピックアップを集めると「能力」が「進化」します
 $tutorial_2_4,Near an exit platform,出口プラットフォーム
-$abi_jump,You have gained the ability to JUMP[p]Press SPACE key to JUMP[/p],ジャンプする能力を獲得しました[p]ジャンプするには「スペース」キーを押してください[/p]
-$abi_jump_double,JUMP ability 'evolved' to double jump[p]Press SPACE key two times in the Air[/p],「ジャンプ」能力はダブルジャンプに進化しました[p]空中にいるときに「スペース」キーを2回押してください[/p]
-$abi_float,Double Jump 'evolved' to FLOAT[p]Hold SPACE key to float in the Air[/p],「ダブルジャンプ」能力がフロートに進化しました[p]「スペース」キーを押したままにすると空中に浮かびます[/p]
+$abi_jump,You have gained the ability to JUMP[p] [/p][p]Press SPACE key to JUMP[/p],ジャンプする能力を獲得しました[p] [/p][p]ジャンプするには「スペース」キーを押してください[/p]
+$abi_jump_double,JUMP ability 'evolved' to double jump[p] [/p][p]Press SPACE key two times in the Air[/p],「ジャンプ」能力はダブルジャンプに進化しました[p] [/p][p]空中にいるときに「スペース」キーを2回押してください[/p]
+$abi_float,Double Jump 'evolved' to FLOAT[p] [/p][p]Hold SPACE key to float in the Air[/p],「ダブルジャンプ」能力がフロートに進化しました[p] [/p][p]「スペース」キーを押したままにすると空中に浮かびます[/p]
 $endMsg,You have fully evolved the knight!,騎士を完全に進化させました！
 $coinCollected,Coins Collected:,集めた「コイン」：

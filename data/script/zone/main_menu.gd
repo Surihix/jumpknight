@@ -1,8 +1,5 @@
 extends Node
 
-const PIXEL_OPERATOR_8_BOLD = preload("res://data/ui/font/PixelOperator8-Bold.ttf")
-const PIXEL_OPERATOR_8 = preload("res://data/ui/font/PixelOperator8.ttf")
-
 @onready var base_menu_anim = $BaseMenu/AnimationPlayer
 @onready var options_menu_anim = $OptionsMenu/AnimationPlayer
 @onready var credits_menu_anim = $CreditsMenu/AnimationPlayer
@@ -126,15 +123,15 @@ func _on_lang_option_button_item_selected(index):
 func changeLabelFont(locale):
 	match locale:
 		"en":
-			sfx_option_label.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
-			music_option_label.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
-			lang_option_label.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
-			new_game_button.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
-			options_button.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
-			credits_button.add_theme_font_override("font", PIXEL_OPERATOR_8_BOLD)
-			music_credit_label.add_theme_font_override("font", PIXEL_OPERATOR_8)
-			art_sfx_credit_label.add_theme_font_override("font", PIXEL_OPERATOR_8)
-			prog_credit_label.add_theme_font_override("font", PIXEL_OPERATOR_8)
+			sfx_option_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
+			music_option_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
+			lang_option_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
+			new_game_button.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
+			options_button.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
+			credits_button.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
+			music_credit_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8)
+			art_sfx_credit_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8)
+			prog_credit_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8)
 		"ja":
 			sfx_option_label.remove_theme_font_override("font")
 			music_option_label.remove_theme_font_override("font")

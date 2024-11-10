@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://ce0s06b62owqm"]
+[gd_scene load_steps=23 format=4 uid="uid://ce0s06b62owqm"]
 
 [ext_resource type="Script" path="res://data/script/zone/stage_3.gd" id="1_xhk04"]
 [ext_resource type="PackedScene" uid="uid://dj3rf887nnpgb" path="res://data/ui/ui.tscn" id="2_hasdp"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dm7m0n5ugxslt" path="res://data/chr/knight_data/knight.tscn" id="4_yeqa2"]
 [ext_resource type="PackedScene" uid="uid://h6s640so3h1v" path="res://data/object/collectible/ability.tscn" id="5_3tqki"]
 [ext_resource type="PackedScene" uid="uid://dor7wtx18sd1r" path="res://data/zone/platform_a.tscn" id="5_uom6e"]
+[ext_resource type="PackedScene" uid="uid://qy43pbxkt82f" path="res://data/ui/popup_text.tscn" id="6_3yufu"]
 [ext_resource type="PackedScene" uid="uid://d223v6y48k83c" path="res://data/object/collectible/coin.tscn" id="6_cq5e4"]
 [ext_resource type="PackedScene" uid="uid://cj1nhhwg04gyn" path="res://data/object/misc/killzone.tscn" id="8_2o3jy"]
 
@@ -288,6 +289,8 @@ limit_top = -482
 limit_right = 665
 limit_bottom = 58
 limit_smoothed = true
+
+[node name="PopupText" parent="." instance=ExtResource("6_3yufu")]
 
 [node name="collectibles" type="Node" parent="."]
 

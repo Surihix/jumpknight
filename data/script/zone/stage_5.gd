@@ -3,6 +3,7 @@ extends Node
 func _ready():
 	GameManager.currentStage = 5
 	GameManager.currentStageUiTxtNode = get_tree().current_scene.get_node("UI").get_node("CollectionCounter")
+	GameManager.currentStagePopUpTxtNode = get_tree().current_scene.get_node("PopupText")
 	
 	if !AudioManager.isTrackSet:
 		AudioManager.setStageTrack()
@@ -15,6 +16,7 @@ func _ready():
 func _on_exit_body_entered(_body):
 	print("exited_stage_4")
 	GameManager.coinsCollectedInPrevStages = GameManager.coinsCollected
+	get_tree().current_scene.get_node("knight").visible = false
 	GameManager.canMove = false
 	AudioManager.isTrackSet = false
-	get_tree().call_deferred("change_scene_to_file", "res://data/zone/end_screen.tscn")
+	ZoneTransition.changeSceneByTransition("res://data/zone/end_screen.tscn")
