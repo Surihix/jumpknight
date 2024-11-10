@@ -18,8 +18,8 @@ func _on_exit_body_entered(_body):
 
 
 func adjustStageLabel():
-	match TranslationServer.get_locale():
-		"en_GB":
+	match GameManager.gameLocale:
+		"en":
 			instructions_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8)
 			instructions_label.add_theme_font_size_override("font_size", 8)
 		"ja":

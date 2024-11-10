@@ -26,7 +26,7 @@ var isCreditsMenu = false
 
 func _ready():
 	_setTranslation()
-	base_menu_anim.play("BaseMenu_fadeIn")
+	_enableBaseMenu()
 
 func _setTranslation():
 	new_game_button.text = tr("$menu_1")
@@ -55,9 +55,9 @@ func _on_options_button_mouse_entered():
 func _on_options_button_pressed():
 	AudioManager.playSelectSound()
 	isOptionsMenu = true
-	base_menu_anim.play("BaseMenu_fadeOut")
-	options_menu_anim.play("OptionsMenu_fadeIn")
-	back_btn_anim.play("BackBtn_fadeIn")
+	_disableBaseMenu()
+	_enableOptionsMenu()
+	_enableBackButton()
 
 func _on_credits_button_mouse_entered():
 	if !credits_button.disabled:
@@ -66,9 +66,9 @@ func _on_credits_button_mouse_entered():
 func _on_credits_button_pressed():
 	AudioManager.playSelectSound()
 	isCreditsMenu = true
-	base_menu_anim.play("BaseMenu_fadeOut")
-	credits_menu_anim.play("CreditsMenu_fadeIn")
-	back_btn_anim.play("BackBtn_fadeIn")
+	_disableBaseMenu()
+	_enableCreditsMenu()
+	_enableBackButton()
 
 func _on_back_button_mouse_entered():
 	if !back_button.disabled:
@@ -76,17 +76,17 @@ func _on_back_button_mouse_entered():
 
 func _on_back_button_pressed():
 	AudioManager.playSelectSound()
-	back_btn_anim.play("BackBtn_fadeOut")
+	_disableBackButton()
 	
 	if (isOptionsMenu):
 		isOptionsMenu = false
-		options_menu_anim.play("OptionsMenu_fadeOut")
+		_disableOptionsMenu()
 	
 	if (isCreditsMenu):
 		isCreditsMenu = false
-		credits_menu_anim.play("CreditsMenu_fadeOut")
+		_disableCreditsMenu()
 	
-	base_menu_anim.play("BaseMenu_fadeIn")
+	_enableBaseMenu()
 
 
 # Options Menu buttons
@@ -112,16 +112,17 @@ func _on_lang_option_button_item_selected(index):
 	match index:
 		0:
 			TranslationServer.set_locale("en")
-			changeLabelFont("en")
-			
+			GameManager.gameLocale = "en"
+			_changeLabelFont()
 		1:
 			TranslationServer.set_locale("ja")
-			changeLabelFont("ja")
+			GameManager.gameLocale = "ja"
+			_changeLabelFont()
 	
 	_setTranslation()
 
-func changeLabelFont(locale):
-	match locale:
+func _changeLabelFont():
+	match GameManager.gameLocale:
 		"en":
 			sfx_option_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
 			music_option_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
@@ -143,8 +144,11 @@ func changeLabelFont(locale):
 			art_sfx_credit_label.remove_theme_font_override("font")
 			prog_credit_label.remove_theme_font_override("font")
 
+
 # Base Menu anim functions
 func _enableBaseMenu():
+	base_menu_anim.play("BaseMenu_fade")
+	await base_menu_anim.animation_finished
 	new_game_button.disabled = false
 	options_button.disabled = false
 	credits_button.disabled = false
@@ -153,39 +157,47 @@ func _disableBaseMenu():
 	new_game_button.disabled = true
 	options_button.disabled = true
 	credits_button.disabled = true
+	base_menu_anim.play_backwards("BaseMenu_fade")
+	await base_menu_anim.animation_finished
 
 
 # Options Menu anim functions
 func _enableOptionsMenu():
+	options_menu_anim.play("OptionsMenu_fade")
+	await options_menu_anim.animation_finished
 	sfx_slider.editable = true
 	sfx_slider.scrollable = true
-	
 	music_slider.editable = true
 	music_slider.scrollable = true
-	
 	lang_option_button.disabled = false
 
 func _disableOptionsMenu():
 	sfx_slider.editable = false
 	sfx_slider.scrollable = false
-	
 	music_slider.editable = false
 	music_slider.scrollable = false
-	
 	lang_option_button.disabled = true
+	options_menu_anim.play_backwards("OptionsMenu_fade")
+	await options_menu_anim.animation_finished
 
 
 # Credits Menu anim functions
 func _enableCreditsMenu():
-	pass
+	credits_menu_anim.play("CreditsMenu_fade")
+	await credits_menu_anim.animation_finished
 
 func _disableCreditsMenu():
-	pass
+	credits_menu_anim.play_backwards("CreditsMenu_fade")
+	await credits_menu_anim.animation_finished
 
 
 # Back button anim functions
 func _enableBackButton():
+	back_btn_anim.play("BackBtn_fade")
+	await back_btn_anim.animation_finished
 	back_button.disabled = false
 
 func _disableBackButton():
 	back_button.disabled = true
+	back_btn_anim.play_backwards("BackBtn_fade")
+	await back_btn_anim.animation_finished

@@ -1,23 +1,19 @@
-[gd_scene load_steps=26 format=3 uid="uid://cwn84aeknk1i7"]
+[gd_scene load_steps=22 format=3 uid="uid://cwn84aeknk1i7"]
 
 [ext_resource type="Script" path="res://data/script/zone/main_menu.gd" id="1_mrvgp"]
 [ext_resource type="Animation" uid="uid://c7mt8dbj3ecko" path="res://data/anim/zone/main_menu/TitleText_scaling.res" id="3_266b3"]
 [ext_resource type="Animation" uid="uid://bvcxqim2iaqqo" path="res://data/anim/zone/main_menu/TitleText_RESET.res" id="4_cq1cg"]
 [ext_resource type="FontFile" uid="uid://xluqv27b3tww" path="res://data/ui/font/PixelOperator8-Bold.ttf" id="5_47kov"]
-[ext_resource type="Animation" uid="uid://cg1fgwfbiqbtt" path="res://data/anim/zone/main_menu/BaseMenu_fadeIn.res" id="5_dtu42"]
+[ext_resource type="Animation" uid="uid://d0fes2t87i5g6" path="res://data/anim/zone/main_menu/BaseMenu_fade.res" id="5_n4cm6"]
 [ext_resource type="Material" uid="uid://bjuub1uhrgfe0" path="res://data/ui/canvas_item_mat.tres" id="5_qr285"]
-[ext_resource type="Animation" uid="uid://ddbps3pg4dwff" path="res://data/anim/zone/main_menu/BaseMenu_fadeOut.res" id="6_ra2x4"]
-[ext_resource type="Animation" uid="uid://lt883mbx3vet" path="res://data/anim/zone/main_menu/BaseMenu_RESET.res" id="7_gfrx1"]
-[ext_resource type="Animation" uid="uid://b3w2l5pkr1rno" path="res://data/anim/zone/main_menu/OptionsMenu_fadeIn.res" id="8_jat3k"]
-[ext_resource type="Animation" uid="uid://d0ee4ugpjts0c" path="res://data/anim/zone/main_menu/OptionsMenu_fadeOut.res" id="9_1lwpc"]
-[ext_resource type="Animation" uid="uid://dema1fk2xgwyc" path="res://data/anim/zone/main_menu/OptionsMenu_RESET.res" id="10_c525x"]
+[ext_resource type="Animation" uid="uid://cbfn0i2pcpvxt" path="res://data/anim/zone/main_menu/BaseMenu_RESET.res" id="5_ya2ab"]
+[ext_resource type="Animation" uid="uid://c4t66qc2ap4ct" path="res://data/anim/zone/main_menu/OptionsMenu_fade.res" id="7_kliqr"]
+[ext_resource type="Animation" uid="uid://c1orlosw02eyr" path="res://data/anim/zone/main_menu/OptionsMenu_RESET.res" id="8_3dj7y"]
+[ext_resource type="Animation" uid="uid://bb8wsa3150oe0" path="res://data/anim/zone/main_menu/CreditsMenu_fade.res" id="9_qhcxs"]
+[ext_resource type="Animation" uid="uid://c1xw7k0gnujcp" path="res://data/anim/zone/main_menu/BackBtn_fade.res" id="10_wsp1p"]
 [ext_resource type="FontFile" uid="uid://b7gbn816jlora" path="res://data/ui/font/PixelOperator8.ttf" id="11_82hlm"]
-[ext_resource type="Animation" uid="uid://3aogxy3cwmc7" path="res://data/anim/zone/main_menu/CreditsMenu_fadeIn.res" id="11_j6pns"]
-[ext_resource type="Animation" uid="uid://bgky778v1tsjr" path="res://data/anim/zone/main_menu/CreditsMenu_fadeOut.res" id="12_62gwk"]
-[ext_resource type="Animation" uid="uid://byeptjh78swog" path="res://data/anim/zone/main_menu/CreditsMenu_RESET.res" id="13_tkgeo"]
-[ext_resource type="Animation" uid="uid://scibl2c7tnet" path="res://data/anim/zone/main_menu/BackBtn_fadeIn.res" id="14_778c0"]
-[ext_resource type="Animation" uid="uid://cbk5wnj2x4oiw" path="res://data/anim/zone/main_menu/BackBtn_fadeOut.res" id="15_vmlip"]
-[ext_resource type="Animation" uid="uid://ifnhvkgtei42" path="res://data/anim/zone/main_menu/BackBtn_RESET.res" id="16_nl8dr"]
+[ext_resource type="Animation" uid="uid://fkaarkyj3s53" path="res://data/anim/zone/main_menu/CreditsMenu_RESET.res" id="11_inwt1"]
+[ext_resource type="Animation" uid="uid://deygllil4gxt2" path="res://data/anim/zone/main_menu/BackBtn_RESET.res" id="13_nwxfb"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ecx75"]
 _data = {
@@ -27,9 +23,8 @@ _data = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_funh0"]
 _data = {
-"BaseMenu_RESET": ExtResource("7_gfrx1"),
-"BaseMenu_fadeIn": ExtResource("5_dtu42"),
-"BaseMenu_fadeOut": ExtResource("6_ra2x4")
+"BaseMenu_RESET": ExtResource("5_ya2ab"),
+"BaseMenu_fade": ExtResource("5_n4cm6")
 }
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jyujo"]
@@ -38,23 +33,20 @@ _data = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7svbl"]
 _data = {
-"OptionsMenu_RESET": ExtResource("10_c525x"),
-"OptionsMenu_fadeIn": ExtResource("8_jat3k"),
-"OptionsMenu_fadeOut": ExtResource("9_1lwpc")
+"OptionsMenu_RESET": ExtResource("8_3dj7y"),
+"OptionsMenu_fade": ExtResource("7_kliqr")
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_21woo"]
 _data = {
-"CreditsMenu_RESET": ExtResource("13_tkgeo"),
-"CreditsMenu_fadeIn": ExtResource("11_j6pns"),
-"CreditsMenu_fadeOut": ExtResource("12_62gwk")
+"CreditsMenu_RESET": ExtResource("11_inwt1"),
+"CreditsMenu_fade": ExtResource("9_qhcxs")
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fu8vn"]
 _data = {
-"BackBtn_RESET": ExtResource("16_nl8dr"),
-"BackBtn_fadeIn": ExtResource("14_778c0"),
-"BackBtn_fadeOut": ExtResource("15_vmlip")
+"BackBtn_RESET": ExtResource("13_nwxfb"),
+"BackBtn_fade": ExtResource("10_wsp1p")
 }
 
 [node name="MainMenu" type="Control"]
@@ -93,7 +85,7 @@ libraries = {
 autoplay = "TitleText_scaling"
 
 [node name="BaseMenu" type="Control" parent="."]
-modulate = Color(0, 0, 0, 1)
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -159,7 +151,7 @@ text = "txt"
 flat = true
 
 [node name="OptionsMenu" type="Control" parent="."]
-modulate = Color(0, 0, 0, 1)
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -251,7 +243,7 @@ popup/item_1/text = "日本語"
 popup/item_1/id = 1
 
 [node name="CreditsMenu" type="Control" parent="."]
-modulate = Color(0, 0, 0, 1)
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -295,7 +287,7 @@ theme_override_font_sizes/font_size = 28
 text = "txt"
 
 [node name="BackButton" type="Button" parent="."]
-modulate = Color(0, 0, 0, 1)
+modulate = Color(1, 1, 1, 0)
 material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 857.0

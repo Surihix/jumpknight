@@ -12,32 +12,30 @@ func _on_body_entered(_body):
 			print("jumpEnabled")
 			abiText = tr("$abi_jump")
 			
-			match TranslationServer.get_locale():
-				"en_GB":
+			match GameManager.gameLocale:
+				"en":
 					GameManager.currentStagePopUpTxtNode.displayPopUpTxt(-82, -105, abiText, 3)
 				"ja":
 					GameManager.currentStagePopUpTxtNode.displayPopUpTxt(-82, -105, abiText, 12)
-			
 		4:
 			GameManager.jumpsAllowed = 2
 			GameManager.isDoubleJumpEnabled = true
 			print("doubleJumpEnabled")
 			abiText = tr("$abi_jump_double")
 			
-			match TranslationServer.get_locale():
-				"en_GB":
+			match GameManager.gameLocale:
+				"en":
 					GameManager.currentStagePopUpTxtNode.displayPopUpTxt(-135, -22, abiText, 3)
 				"ja":
 					GameManager.currentStagePopUpTxtNode.displayPopUpTxt(-135, -22, abiText, 12)
-			
 		5:
 			GameManager.isJumpEnabled = false
 			GameManager.isFloatEnabled = true
 			print("floatEnabled")
 			abiText = tr("$abi_float")
 			
-			match TranslationServer.get_locale():
-				"en_GB":
+			match GameManager.gameLocale:
+				"en":
 					GameManager.currentStagePopUpTxtNode.displayPopUpTxt(-99, -112, abiText, 3)
 				"ja":
 					GameManager.currentStagePopUpTxtNode.displayPopUpTxt(-99, -112, abiText, 12)

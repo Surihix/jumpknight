@@ -22,8 +22,8 @@ func _on_exit_body_entered(_body):
 
 
 func adjustStageLabel():
-	match TranslationServer.get_locale():
-		"en_GB":
+	match GameManager.gameLocale:
+		"en":
 			coin_msg_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8)
 			coin_msg_label.add_theme_font_size_override("font_size", 8)
 			

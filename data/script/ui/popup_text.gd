@@ -10,8 +10,8 @@ func displayPopUpTxt(posX, posY, text, time):
 	label.position.y = posY
 	label.text = tr(text)
 	
-	match TranslationServer.get_locale():
-		"en_GB":
+	match GameManager.gameLocale:
+		"en":
 			label.add_theme_font_override("normal_font", FontConstants.PIXEL_OPERATOR_8)
 			label.add_theme_font_size_override("normal_font_size", 8)
 		"ja":
