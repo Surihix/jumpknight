@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://c20fyhf3ktrea"]
+[gd_scene load_steps=9 format=4 uid="uid://c20fyhf3ktrea"]
 
 [ext_resource type="Script" path="res://data/script/zone/stage_1.gd" id="1_mnmuv"]
 [ext_resource type="FontFile" uid="uid://b7gbn816jlora" path="res://data/ui/font/PixelOperator8.ttf" id="2_gxb8p"]
 [ext_resource type="Texture2D" uid="uid://bj13c6bu3polu" path="res://data/zone/sprite/world_tileset.png" id="3_8yclh"]
 [ext_resource type="PackedScene" uid="uid://dm7m0n5ugxslt" path="res://data/chr/knight_data/knight.tscn" id="4_2ogvc"]
+[ext_resource type="PackedScene" uid="uid://p4m8f53y36xm" path="res://data/shader/shader_layer.tscn" id="5_wujig"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f8lix"]
 texture = ExtResource("3_8yclh")
@@ -178,6 +179,8 @@ limit_left = -155
 limit_top = -91
 limit_right = 175
 limit_bottom = 91
+
+[node name="ShaderLayer" parent="." instance=ExtResource("5_wujig")]
 
 [node name="Exit" type="Area2D" parent="."]
 position = Vector2(166, 8)

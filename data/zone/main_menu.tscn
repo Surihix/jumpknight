@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cwn84aeknk1i7"]
+[gd_scene load_steps=22 format=3 uid="uid://cwn84aeknk1i7"]
 
 [ext_resource type="Script" path="res://data/script/zone/main_menu.gd" id="1_mrvgp"]
 [ext_resource type="Animation" uid="uid://c7mt8dbj3ecko" path="res://data/anim/zone/main_menu/TitleText_scaling.res" id="3_266b3"]
@@ -13,6 +13,7 @@
 [ext_resource type="FontFile" uid="uid://b7gbn816jlora" path="res://data/ui/font/PixelOperator8.ttf" id="11_82hlm"]
 [ext_resource type="Animation" uid="uid://fkaarkyj3s53" path="res://data/anim/zone/main_menu/CreditsMenu_RESET.res" id="11_inwt1"]
 [ext_resource type="Animation" uid="uid://deygllil4gxt2" path="res://data/anim/zone/main_menu/BackBtn_RESET.res" id="13_nwxfb"]
+[ext_resource type="PackedScene" uid="uid://p4m8f53y36xm" path="res://data/shader/shader_layer.tscn" id="14_y6p8g"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ecx75"]
 _data = {
@@ -232,6 +233,37 @@ popup/item_0/text = "English"
 popup/item_1/text = "Japanese"
 popup/item_1/id = 1
 
+[node name="ShaderOptionLabel" type="Label" parent="OptionsMenu"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 501.0
+offset_right = 656.0
+offset_bottom = 552.0
+theme_override_fonts/font = ExtResource("5_47kov")
+theme_override_font_sizes/font_size = 38
+text = "txt"
+
+[node name="ShaderOptionButton" type="OptionButton" parent="OptionsMenu"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 0
+offset_left = 801.0
+offset_top = 497.0
+offset_right = 1050.0
+offset_bottom = 547.0
+theme_override_colors/font_hover_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.701961, 0.321569, 1)
+theme_override_colors/font_focus_color = Color(0.74902, 1, 0.72549, 1)
+theme_override_fonts/font = ExtResource("11_82hlm")
+theme_override_font_sizes/font_size = 31
+disabled = true
+flat = true
+expand_icon = true
+selected = 0
+item_count = 2
+popup/item_0/text = "None"
+popup/item_1/text = "CRT"
+popup/item_1/id = 1
+
 [node name="CreditsMenu" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 0
@@ -296,6 +328,8 @@ libraries = {
 "": SubResource("AnimationLibrary_fu8vn")
 }
 
+[node name="ShaderLayer" parent="." instance=ExtResource("14_y6p8g")]
+
 [connection signal="mouse_entered" from="BaseMenu/NewGameButton" to="." method="_on_new_game_button_mouse_entered"]
 [connection signal="pressed" from="BaseMenu/NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="mouse_entered" from="BaseMenu/OptionsButton" to="." method="_on_options_button_mouse_entered"]
@@ -308,5 +342,8 @@ libraries = {
 [connection signal="value_changed" from="OptionsMenu/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="item_selected" from="OptionsMenu/LangOptionButton" to="." method="_on_lang_option_button_item_selected"]
 [connection signal="mouse_entered" from="OptionsMenu/LangOptionButton" to="." method="_on_lang_option_button_mouse_entered"]
+[connection signal="item_selected" from="OptionsMenu/ShaderOptionButton" to="." method="_on_shader_option_button_item_selected"]
+[connection signal="mouse_entered" from="OptionsMenu/ShaderOptionButton" to="." method="_on_shader_option_button_mouse_entered"]
 [connection signal="mouse_entered" from="BackButton" to="." method="_on_back_button_mouse_entered"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="visibility_changed" from="ShaderLayer" to="ShaderLayer" method="_on_visibility_changed"]

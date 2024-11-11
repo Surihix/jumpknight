@@ -1,8 +1,12 @@
 extends Node
 
 @onready var instructions_label = $InstructionsLabel
+@onready var shader_layer = $ShaderLayer
 
 func _ready():
+	if GameManager.isShaderOn:
+		shader_layer.visible = true
+	
 	instructions_label.text = tr("$tutorial_1")
 	adjustStageLabel()
 	GameManager.currentStage = 1

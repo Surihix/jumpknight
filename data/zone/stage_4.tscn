@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bhvrgbwmro6c6"]
+[gd_scene load_steps=27 format=4 uid="uid://bhvrgbwmro6c6"]
 
 [ext_resource type="Script" path="res://data/script/zone/stage_4.gd" id="1_l4qyx"]
 [ext_resource type="PackedScene" uid="uid://dj3rf887nnpgb" path="res://data/ui/ui.tscn" id="2_fdxa1"]
@@ -15,6 +15,7 @@
 [ext_resource type="Animation" uid="uid://oh1kci1pu4mq" path="res://data/anim/zone/stage_4/platform_b2_moveInYaxis.res" id="10_mxp3s"]
 [ext_resource type="Animation" uid="uid://dnxvyo3j5w7gf" path="res://data/anim/zone/stage_4/platform_b2_RESET.res" id="11_i4f7j"]
 [ext_resource type="PackedScene" uid="uid://cj1nhhwg04gyn" path="res://data/object/misc/killzone.tscn" id="13_wf6qc"]
+[ext_resource type="PackedScene" uid="uid://p4m8f53y36xm" path="res://data/shader/shader_layer.tscn" id="15_m5oy3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ro6k0"]
 texture = ExtResource("3_74wuo")
@@ -398,6 +399,8 @@ libraries = {
 "": SubResource("AnimationLibrary_jxmtu")
 }
 autoplay = "platform_b2_moveInYaxis"
+
+[node name="ShaderLayer" parent="." instance=ExtResource("15_m5oy3")]
 
 [node name="killzone" parent="." instance=ExtResource("13_wf6qc")]
 position = Vector2(0, 145)

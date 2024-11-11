@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbxo2okdlggbj"]
+[gd_scene load_steps=4 format=3 uid="uid://bbxo2okdlggbj"]
 
 [ext_resource type="Script" path="res://data/script/zone/end_screen.gd" id="1_hvhcc"]
 [ext_resource type="FontFile" uid="uid://xluqv27b3tww" path="res://data/ui/font/PixelOperator8-Bold.ttf" id="2_fu1x7"]
+[ext_resource type="PackedScene" uid="uid://p4m8f53y36xm" path="res://data/shader/shader_layer.tscn" id="3_g3qe8"]
 
 [node name="endScreen" type="Node2D"]
 script = ExtResource("1_hvhcc")
@@ -30,3 +31,5 @@ theme_override_colors/font_color = Color(1, 1, 0.027451, 1)
 theme_override_fonts/font = ExtResource("2_fu1x7")
 theme_override_font_sizes/font_size = 38
 text = "txt"
+
+[node name="ShaderLayer" parent="." instance=ExtResource("3_g3qe8")]

@@ -4,8 +4,12 @@ extends Node
 @onready var ability_msg_label = $AbilityMessage/AbilityMsgLabel
 @onready var ability_msg_label_2 = $AbilityMessage/AbilityMsgLabel2
 @onready var exit_msg_label = $ExitMessage/ExitMsgLabel
+@onready var shader_layer = $ShaderLayer
 
 func _ready():
+	if GameManager.isShaderOn:
+		shader_layer.visible = true
+	
 	coin_msg_label.text = tr("$tutorial_2_1")
 	ability_msg_label.text = tr("$tutorial_2_2")
 	ability_msg_label_2.text = tr("$tutorial_2_3")

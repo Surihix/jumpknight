@@ -16,16 +16,21 @@ extends Node
 @onready var music_slider = $OptionsMenu/MusicSlider
 @onready var lang_option_label = $OptionsMenu/LangOptionLabel
 @onready var lang_option_button = $OptionsMenu/LangOptionButton
+@onready var shader_option_label = $OptionsMenu/ShaderOptionLabel
+@onready var shader_option_button = $OptionsMenu/ShaderOptionButton
 
 @onready var music_credit_label = $CreditsMenu/MusicCreditLabel
 @onready var art_sfx_credit_label = $CreditsMenu/ArtSFXCreditLabel
 @onready var prog_credit_label = $CreditsMenu/ProgCreditLabel
+
+@onready var shader_layer = $ShaderLayer
 
 var isOptionsMenu = false
 var isCreditsMenu = false
 
 func _ready():
 	lang_option_button.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+	shader_option_button.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
 	_setTranslation()
 	_enableBaseMenu()
 
@@ -35,6 +40,7 @@ func _setTranslation():
 	sfx_option_label.text = tr("$menu_2_1")
 	music_option_label.text = tr("$menu_2_2")
 	lang_option_label.text = tr("$menu_2_3")
+	shader_option_label.text = tr("$menu_2_4")
 	credits_button.text = tr("$menu_3")
 	music_credit_label.text = tr("$menu_3_1")
 	art_sfx_credit_label.text = tr("$menu_3_2")
@@ -122,30 +128,39 @@ func _on_lang_option_button_item_selected(index):
 	
 	_setTranslation()
 
+func _on_shader_option_button_mouse_entered():
+	if !shader_option_button.disabled:
+		AudioManager.playNavigateSound()
+
+func _on_shader_option_button_item_selected(index):
+	match index:
+		0:
+			shader_layer.visible = false
+			GameManager.isShaderOn = false
+		1:
+			shader_layer.visible = true
+			GameManager.isShaderOn = true
+
 func _changeLabelFont():
+	var fontToUse = FontConstants.PIXEL_OPERATOR_8_BOLD
+	
 	match GameManager.gameLocale:
 		"en":
-			sfx_option_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
-			music_option_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
-			lang_option_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
-			new_game_button.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
-			options_button.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
-			credits_button.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
-			music_credit_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8)
-			art_sfx_credit_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8)
-			prog_credit_label.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8)
-			back_button.add_theme_font_override("font", FontConstants.PIXEL_OPERATOR_8_BOLD)
+			fontToUse = FontConstants.PIXEL_OPERATOR_8_BOLD
 		"ja":
-			sfx_option_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
-			music_option_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
-			lang_option_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
-			new_game_button.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
-			options_button.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
-			credits_button.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
-			music_credit_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
-			art_sfx_credit_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
-			prog_credit_label.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
-			back_button.add_theme_font_override("font", FontConstants.NOTO_SANS_JP_SEMI_BOLD)
+			fontToUse = FontConstants.NOTO_SANS_JP_SEMI_BOLD
+	
+	sfx_option_label.add_theme_font_override("font", fontToUse)
+	music_option_label.add_theme_font_override("font", fontToUse)
+	lang_option_label.add_theme_font_override("font", fontToUse)
+	shader_option_label.add_theme_font_override("font", fontToUse)
+	new_game_button.add_theme_font_override("font", fontToUse)
+	options_button.add_theme_font_override("font", fontToUse)
+	credits_button.add_theme_font_override("font", fontToUse)
+	music_credit_label.add_theme_font_override("font", fontToUse)
+	art_sfx_credit_label.add_theme_font_override("font", fontToUse)
+	prog_credit_label.add_theme_font_override("font", fontToUse)
+	back_button.add_theme_font_override("font", fontToUse)
 
 
 # Base Menu anim functions
@@ -173,6 +188,7 @@ func _enableOptionsMenu():
 	music_slider.editable = true
 	music_slider.scrollable = true
 	lang_option_button.disabled = false
+	shader_option_button.disabled = false
 
 func _disableOptionsMenu():
 	sfx_slider.editable = false
@@ -180,6 +196,7 @@ func _disableOptionsMenu():
 	music_slider.editable = false
 	music_slider.scrollable = false
 	lang_option_button.disabled = true
+	shader_option_button.disabled = true
 	options_menu_anim.play_backwards("OptionsMenu_fade")
 	await options_menu_anim.animation_finished
 

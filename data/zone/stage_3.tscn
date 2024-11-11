@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://ce0s06b62owqm"]
+[gd_scene load_steps=24 format=4 uid="uid://ce0s06b62owqm"]
 
 [ext_resource type="Script" path="res://data/script/zone/stage_3.gd" id="1_xhk04"]
 [ext_resource type="PackedScene" uid="uid://dj3rf887nnpgb" path="res://data/ui/ui.tscn" id="2_hasdp"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://qy43pbxkt82f" path="res://data/ui/popup_text.tscn" id="6_3yufu"]
 [ext_resource type="PackedScene" uid="uid://d223v6y48k83c" path="res://data/object/collectible/coin.tscn" id="6_cq5e4"]
 [ext_resource type="PackedScene" uid="uid://cj1nhhwg04gyn" path="res://data/object/misc/killzone.tscn" id="8_2o3jy"]
+[ext_resource type="PackedScene" uid="uid://p4m8f53y36xm" path="res://data/shader/shader_layer.tscn" id="9_2jx6i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knu2j"]
 texture = ExtResource("3_imcbe")
@@ -342,6 +343,8 @@ libraries = {
 "": SubResource("AnimationLibrary_cyi60")
 }
 autoplay = "platform_a3_moveInYaxis"
+
+[node name="ShaderLayer" parent="." instance=ExtResource("9_2jx6i")]
 
 [node name="killzone" parent="." instance=ExtResource("8_2o3jy")]
 position = Vector2(303, 78)

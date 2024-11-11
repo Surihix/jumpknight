@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://cxsy8s63gf8vg"]
+[gd_scene load_steps=12 format=4 uid="uid://cxsy8s63gf8vg"]
 
 [ext_resource type="Script" path="res://data/script/zone/stage_2.gd" id="1_qar5p"]
 [ext_resource type="Texture2D" uid="uid://bj13c6bu3polu" path="res://data/zone/sprite/world_tileset.png" id="2_a884m"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://b7gbn816jlora" path="res://data/ui/font/PixelOperator8.ttf" id="4_2krgk"]
 [ext_resource type="Texture2D" uid="uid://c1i14tjblncuc" path="res://data/ui/sprite/icon_ability.png" id="5_778dk"]
 [ext_resource type="Texture2D" uid="uid://cn8ysknuunk04" path="res://data/ui/sprite/exit_platform.png" id="6_tqa1i"]
+[ext_resource type="PackedScene" uid="uid://p4m8f53y36xm" path="res://data/shader/shader_layer.tscn" id="8_h32q4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3mbgk"]
 texture = ExtResource("2_a884m")
@@ -229,6 +230,8 @@ limit_top = -91
 limit_right = 177
 limit_bottom = 91
 limit_smoothed = true
+
+[node name="ShaderLayer" parent="." instance=ExtResource("8_h32q4")]
 
 [node name="Exit" type="Area2D" parent="."]
 visibility_layer = 2

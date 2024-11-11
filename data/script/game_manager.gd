@@ -1,6 +1,7 @@
 extends Node
 
 var gameLocale = "en"
+var isShaderOn = false
 var currentStage = 0
 var currentStageUiTxtNode = null
 var currentStagePopUpTxtNode = null

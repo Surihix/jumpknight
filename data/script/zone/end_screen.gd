@@ -2,8 +2,12 @@ extends Node
 
 @onready var evolved_txt_label = $EvolvedTxtLabel
 @onready var total_coins_collected_label = $TotalCoinsCollectedLabel
+@onready var shader_layer = $ShaderLayer
 
 func _ready():
+	if GameManager.isShaderOn:
+		shader_layer.visible = true
+	
 	AudioManager.stopStageTrack()
 	evolved_txt_label.text = tr("$endMsg")
 	total_coins_collected_label.text = tr("$coinCollected") + " " + str(GameManager.coinsCollected)
