@@ -1,12 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://p4m8f53y36xm"]
 
-[ext_resource type="Shader" path="res://data/shader/CRTeffect.gdshader" id="1_253cu"]
 [ext_resource type="Script" path="res://data/script/shader/shader_control.gd" id="1_gxcvh"]
+[ext_resource type="Shader" path="res://data/shader/scanline_effect.gdshader" id="2_mup05"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jf4fv"]
-shader = ExtResource("1_253cu")
-shader_parameter/curvature = 8.0
-shader_parameter/vignette_multiplier = 0.0
+shader = ExtResource("2_mup05")
 
 [sub_resource type="QuadMesh" id="QuadMesh_q6pj7"]
 

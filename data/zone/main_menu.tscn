@@ -261,7 +261,7 @@ expand_icon = true
 selected = 0
 item_count = 2
 popup/item_0/text = "None"
-popup/item_1/text = "CRT"
+popup/item_1/text = "Scanlines"
 popup/item_1/id = 1
 
 [node name="CreditsMenu" type="Control" parent="."]
