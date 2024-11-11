@@ -1,11 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://cwn84aeknk1i7"]
+[gd_scene load_steps=21 format=3 uid="uid://cwn84aeknk1i7"]
 
 [ext_resource type="Script" path="res://data/script/zone/main_menu.gd" id="1_mrvgp"]
 [ext_resource type="Animation" uid="uid://c7mt8dbj3ecko" path="res://data/anim/zone/main_menu/TitleText_scaling.res" id="3_266b3"]
 [ext_resource type="Animation" uid="uid://bvcxqim2iaqqo" path="res://data/anim/zone/main_menu/TitleText_RESET.res" id="4_cq1cg"]
 [ext_resource type="FontFile" uid="uid://xluqv27b3tww" path="res://data/ui/font/PixelOperator8-Bold.ttf" id="5_47kov"]
 [ext_resource type="Animation" uid="uid://d0fes2t87i5g6" path="res://data/anim/zone/main_menu/BaseMenu_fade.res" id="5_n4cm6"]
-[ext_resource type="Material" uid="uid://bjuub1uhrgfe0" path="res://data/ui/canvas_item_mat.tres" id="5_qr285"]
 [ext_resource type="Animation" uid="uid://cbfn0i2pcpvxt" path="res://data/anim/zone/main_menu/BaseMenu_RESET.res" id="5_ya2ab"]
 [ext_resource type="Animation" uid="uid://c4t66qc2ap4ct" path="res://data/anim/zone/main_menu/OptionsMenu_fade.res" id="7_kliqr"]
 [ext_resource type="Animation" uid="uid://c1orlosw02eyr" path="res://data/anim/zone/main_menu/OptionsMenu_RESET.res" id="8_3dj7y"]
@@ -96,7 +95,6 @@ libraries = {
 }
 
 [node name="NewGameButton" type="Button" parent="BaseMenu"]
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 401.5
 offset_top = 261.0
@@ -115,7 +113,6 @@ text = "txt
 flat = true
 
 [node name="OptionsButton" type="Button" parent="BaseMenu"]
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 401.5
 offset_top = 347.0
@@ -133,7 +130,6 @@ text = "txt"
 flat = true
 
 [node name="CreditsButton" type="Button" parent="BaseMenu"]
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 401.5
 offset_top = 433.0
@@ -162,7 +158,6 @@ libraries = {
 }
 
 [node name="SFXOptionLabel" type="Label" parent="OptionsMenu"]
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 249.0
 offset_top = 291.0
@@ -173,7 +168,6 @@ theme_override_font_sizes/font_size = 38
 text = "txt"
 
 [node name="SFXSlider" type="HSlider" parent="OptionsMenu"]
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 747.0
 offset_top = 304.0
@@ -186,7 +180,6 @@ editable = false
 scrollable = false
 
 [node name="MusicOptionLabel" type="Label" parent="OptionsMenu"]
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 249.0
 offset_top = 361.0
@@ -197,7 +190,6 @@ theme_override_font_sizes/font_size = 38
 text = "txt"
 
 [node name="MusicSlider" type="HSlider" parent="OptionsMenu"]
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 747.0
 offset_top = 374.0
@@ -210,7 +202,6 @@ editable = false
 scrollable = false
 
 [node name="LangOptionLabel" type="Label" parent="OptionsMenu"]
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 249.0
 offset_top = 431.0
@@ -221,7 +212,6 @@ theme_override_font_sizes/font_size = 38
 text = "txt"
 
 [node name="LangOptionButton" type="OptionButton" parent="OptionsMenu"]
-material = ExtResource("5_qr285")
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 0
 offset_left = 801.0
@@ -254,7 +244,6 @@ libraries = {
 }
 
 [node name="MusicCreditLabel" type="Label" parent="CreditsMenu"]
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 108.0
 offset_top = 274.0
@@ -265,7 +254,6 @@ theme_override_font_sizes/font_size = 28
 text = "txt"
 
 [node name="ArtSFXCreditLabel" type="Label" parent="CreditsMenu"]
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 108.0
 offset_top = 346.0
@@ -276,7 +264,6 @@ theme_override_font_sizes/font_size = 28
 text = "txt"
 
 [node name="ProgCreditLabel" type="Label" parent="CreditsMenu"]
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 108.0
 offset_top = 418.0
@@ -288,7 +275,6 @@ text = "txt"
 
 [node name="BackButton" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
-material = ExtResource("5_qr285")
 layout_mode = 0
 offset_left = 857.0
 offset_top = 583.0
